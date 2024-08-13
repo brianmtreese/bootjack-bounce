@@ -1,0 +1,24 @@
+<!-- State Based Animations 
+ ====================================================================== -->
+<div [@btjSlideState]="visible()"></div>
+<!-- <div [@btjSlideState]="{ value: visible(), params: { startX: '0', startY: '-200%', duration: '3s' } }"></div> -->
+<button (click)="visible.set(!visible())">{{ visible() ? 'Hide' : 'Show' }}</button>
+
+<!-- Enter/Leave Animations 
+ ====================================================================== -->
+<!-- @if (visible()) { -->
+    
+    <!-- <div @btjSlideEnterLeave></div> -->
+
+    <!-- <div [@btjSlideEnterLeave]="{
+        value: visible(),
+        params: {
+            hiddenScale: 0,
+            hiddenOpacity: 0,
+            hiddenX: '200%',
+            hiddenY: '-300%'
+        }
+    }"></div> -->
+
+<!-- } -->
+<!-- <button (click)="visible.set(!visible())">{{ visible() ? 'Hide' : 'Show' }}</button> -->
