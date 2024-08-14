@@ -20,13 +20,8 @@ export const btjSlideState = trigger('btjSlideState', [
         style({ 
             opacity: 1,
             scale: 1,
-            translate: '{{ endX }} {{ endY }}' 
-        }), { 
-            params: {
-                endY: '0',
-                endX: '0' 
-            }
-        }
+            translate: '0 0'
+        })
     ),
     transition('false <=> true',
         animate('{{ duration }} ease-in-out'),

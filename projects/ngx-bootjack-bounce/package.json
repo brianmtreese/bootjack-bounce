@@ -1,6 +1,6 @@
 {
   "name": "ngx-bootjack-bounce",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "peerDependencies": {
     "@angular/common": "^18.1.0",
     "@angular/core": "^18.1.0"
@@ -8,5 +8,14 @@
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "keywords": [
+    "angular",
+    "animation",
+    "animate",
+    "ng",
+    "motion",
+    "ui",
+    "utility"
+  ]
 }

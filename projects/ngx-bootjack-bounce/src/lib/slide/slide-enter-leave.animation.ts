@@ -5,24 +5,24 @@ export const btjSlideEnterLeave = trigger('btjSlideEnterLeave', [
     transition(':leave', [
         animate(`${defaultDuration} ease-in-out`,
             style({ 
-                opacity: '{{ hiddenOpacity }}',
-                scale: '{{ hiddenScale }}',
-                translate: '{{ hiddenX }} {{ hiddenY }}' 
+                opacity: '{{ startOpacity }}',
+                scale: '{{ startScale }}',
+                translate: '{{ startX }} {{ startY }}' 
             })
         )
     ], {
         params: {
-            hiddenOpacity: 1,
-            hiddenScale: 1,
-            hiddenX: '-100%',
-            hiddenY: '0' 
+            startOpacity: 1,
+            startScale: 1,
+            startX: '-100%',
+            startY: '0' 
         }
     }),
     transition(':enter', [
         style({ 
-            opacity: '{{ hiddenOpacity }}',
-            scale: '{{ hiddenScale }}',
-            translate: '{{ hiddenX }} {{ hiddenY }}' 
+            opacity: '{{ startOpacity }}',
+            scale: '{{ startScale }}',
+            translate: '{{ startX }} {{ startY }}' 
         }),
         animate(`${defaultDuration} ease-in-out`,
             style({ 
@@ -33,10 +33,10 @@ export const btjSlideEnterLeave = trigger('btjSlideEnterLeave', [
         )
     ], {
         params: {
-            hiddenOpacity: 1,
-            hiddenScale: 1,
-            hiddenX: '-100%',
-            hiddenY: '0' ,
+            startOpacity: 1,
+            startScale: 1,
+            startX: '-100%',
+            startY: '0' ,
         }
     })
 ]);
