@@ -1,0 +1,21 @@
+<!-- <div [@btjFlipHorizontal]="!flipped()" class="container">
+    <div class="box">Side A</div>
+    <div class="box">Side B</div>
+</div> -->
+
+<div [@btjFlipVertical]="!flipped()" class="container">
+    <div class="box">Side A</div>
+    <div class="box">Side B</div>
+</div>
+
+<!-- <div [@btjFlipVertical]="{
+    value: !flipped(),
+    params: {
+        duration: '5s'
+    }
+}" class="container">
+    <div class="box">Side A</div>
+    <div class="box">Side B</div>
+</div> -->
+
+<button (click)="flipped.set(!flipped())">{{ flipped() ? 'Flip Back' : 'Flip' }}</button>

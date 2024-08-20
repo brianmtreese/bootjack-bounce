@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
-import { AnimationComponent } from './animation/animation.component';
+import { SlideAnimationComponent } from './slide-animation/slide-animation.component';
+import { FlipAnimationComponent } from './flip-animation/flip-animation.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [AnimationComponent],
+  imports: [
+    SlideAnimationComponent,
+    FlipAnimationComponent
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

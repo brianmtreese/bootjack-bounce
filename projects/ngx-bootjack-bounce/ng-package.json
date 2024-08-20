@@ -3,5 +3,9 @@
   "dest": "../../dist/ngx-bootjack-bounce",
   "lib": {
     "entryFile": "src/public-api.ts"
-  }
+  },
+  "assets": [
+    "./assets/**/*.*",
+    "./src/lib/**/*.scss*"
+  ]
 }

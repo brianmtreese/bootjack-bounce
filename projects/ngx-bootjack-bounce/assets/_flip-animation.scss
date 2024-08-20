@@ -1,0 +1,30 @@
+::ng-deep {
+
+    :has(> .ng-trigger-btjFlipHorizontal),
+    :has(> .ng-trigger-btjFlipVertical) {
+        perspective: var(--btjPerspective, 1000px);
+    }
+
+    .ng-trigger-btjFlipHorizontal,
+    .ng-trigger-btjFlipVertical {
+        display: grid;
+        transform-style: preserve-3d;
+
+        & > * {
+            backface-visibility: hidden;
+            display: grid;
+            grid-row: 1;
+            grid-column: 1;
+        }
+
+    }
+
+    .ng-trigger-btjFlipHorizontal > :first-child {
+        transform: rotateY(180deg);
+    }
+
+    .ng-trigger-btjFlipVertical > :first-child {
+        transform: rotateX(-180deg);
+    }
+
+}

@@ -2,15 +2,15 @@ import { Component, signal } from "@angular/core";
 import { btjSlideEnterLeave, btjSlideState } from "../../../../ngx-bootjack-bounce/src/public-api";
 
 @Component({
-  selector: 'app-animation',
+  selector: 'app-slide-animation',
   standalone: true,
-  templateUrl: './animation.component.html',
-  styleUrl: './animation.component.scss',
+  templateUrl: './slide-animation.component.html',
+  styleUrl: './slide-animation.component.scss',
   animations: [
     btjSlideState,
     btjSlideEnterLeave
   ]
 })
-export class AnimationComponent {
+export class SlideAnimationComponent {
   protected visible = signal(false);
 }
