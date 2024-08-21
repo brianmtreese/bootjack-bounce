@@ -17,13 +17,17 @@
             grid-column: 1;
         }
 
+        &:first-child {
+            z-index: 1;
+        }
+
     }
 
-    .ng-trigger-btjFlipHorizontal > :first-child {
+    .ng-trigger-btjFlipHorizontal > :last-child {
         transform: rotateY(180deg);
     }
 
-    .ng-trigger-btjFlipVertical > :first-child {
+    .ng-trigger-btjFlipVertical > :last-child {
         transform: rotateX(-180deg);
     }
 

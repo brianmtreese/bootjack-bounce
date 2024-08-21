@@ -1,5 +1,4 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { defaultDuration } from '../shared/globals';
 
 export enum BtjFlipDirection {
     Default,
