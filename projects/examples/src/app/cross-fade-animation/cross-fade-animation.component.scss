@@ -1,0 +1,48 @@
+@use '../../../../ngx-bootjack-bounce/assets/styles.scss';
+
+:host {
+    align-content: center;
+    display: grid;
+    height: 100vh;
+    place-items: center;
+    width: 100vw;
+}
+  
+.container {
+    aspect-ratio: 1 / 1;
+    color: white;
+    font-size: 2em;
+    position: relative;
+    width: 33.334%;
+}
+
+.box {
+    display: grid;
+    place-items: center;
+
+    &:first-child:not([class*='step-']),
+    &.step-1 {
+      background-color: #6244b0;
+    }
+    
+    &:last-child:not([class*='step-']),
+    &.step-2 {
+      background-color: #ff495d;
+    }
+  
+}
+
+button {
+    all: unset;
+    background-color: black;
+    color: white;
+    margin-block-start: 2em;
+    padding: 1em 2em;
+    transition: background-color 250ms;
+    text-align: center;
+  
+    &:hover {
+        background-color: #ff495d;
+    }
+  
+}

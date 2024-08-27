@@ -1,0 +1,43 @@
+<!-- <div [@btjCrossfadeState]="step" class="container">
+    <div [class.active]="step === 1" class="box">Step 1</div>
+    <div [class.active]="step === 2" class="box">Step 2</div>
+</div> -->
+
+<!-- <div [@btjCrossfadeState]="{
+    value: step,
+    params: {
+        duration: '5s',
+        scale: 0
+    }
+}" class="container">
+    <div [class.active]="step === 1" class="box">Step 1</div>
+    <div [class.active]="step === 2" class="box">Step 2</div>
+</div> -->
+
+<!-- <div [@btjCrossfadeEnterLeave]="step" class="container">
+    @if (step === 1) {
+        <div class="box">Step 1</div>
+    }
+    @if (step === 2) {
+        <div class="box">Step 2</div>
+    }
+</div> -->
+
+<div [@btjCrossfadeEnterLeave]="{
+    value: step,
+    params: {
+        duration: '5s',
+        scale: 0
+    }
+}" class="container">
+    @if (step === 1) {
+        <div class="box step-1">Step 1</div>
+    }
+    @if (step === 2) {
+        <div class="box step-2">Step 2</div>
+    }
+</div>
+
+<button (click)="step = step === 1 ? 2 : 1">
+    {{ step === 1 ? 'Next Step' : 'Prev Step' }}
+</button>

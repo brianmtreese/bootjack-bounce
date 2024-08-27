@@ -3,7 +3,7 @@ import { defaultDuration } from '../shared/globals';
 
 export const btjSlideEnterLeave = trigger('btjSlideEnterLeave', [
     transition(':leave', [
-        animate(`${defaultDuration} ease-in-out`,
+        animate('{{ duration }} ease-in-out',
             style({ 
                 opacity: '{{ startOpacity }}',
                 scale: '{{ startScale }}',
@@ -15,7 +15,8 @@ export const btjSlideEnterLeave = trigger('btjSlideEnterLeave', [
             startOpacity: 1,
             startScale: 1,
             startX: '-100%',
-            startY: '0' 
+            startY: '0',
+            duration: defaultDuration
         }
     }),
     transition(':enter', [
@@ -24,7 +25,7 @@ export const btjSlideEnterLeave = trigger('btjSlideEnterLeave', [
             scale: '{{ startScale }}',
             translate: '{{ startX }} {{ startY }}' 
         }),
-        animate(`${defaultDuration} ease-in-out`,
+        animate(`{{ duration }} ease-in-out`,
             style({ 
                 opacity: 1,
                 scale: 1,
@@ -37,6 +38,7 @@ export const btjSlideEnterLeave = trigger('btjSlideEnterLeave', [
             startScale: 1,
             startX: '-100%',
             startY: '0' ,
+            duration: defaultDuration
         }
     })
 ]);

@@ -1,0 +1,23 @@
+::ng-deep {
+
+    .ng-trigger-btjCrossfadeState,
+    .ng-trigger-btjCrossfadeEnterLeave {
+        display: grid;
+
+        & > * {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+    }
+
+
+    .ng-trigger-btjCrossfadeState {
+
+        & > *:not(.active):not(.ng-animating) {
+            display: none;
+        }
+
+    }
+
+}
